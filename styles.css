@@ -1,0 +1,378 @@
+/* 
+    SETTING UP FONT-FAMILY
+*/
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+}
+
+/* 
+    CSS RESET
+*/
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a,
+button,
+input[type="submit"] {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+  Utility classes
+*/
+
+/* 
+  1. Visually hidden
+*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 
+  2. Flexbox utilities
+*/
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-col-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.gap-4 {
+  gap: 1.5rem;
+}
+
+.gap-5 {
+  gap: 3rem;
+}
+
+/* 
+  3. Text utilities
+*/
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* 
+    4. Margin/Paddiing utilities
+*/
+
+.m-0 {
+  margin: 0;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.px-1 {
+  padding-inline: 0.25rem;
+}
+
+.px-2 {
+  padding-inline: 0.5rem;
+}
+
+.px-3 {
+  padding-inline: 1rem;
+}
+
+.px-4 {
+  padding-inline: 1.5rem;
+}
+
+.px-5 {
+  padding-inline: 3rem;
+}
+
+.py-1 {
+  padding-block: 0.25rem;
+}
+
+.py-2 {
+  padding-block: 0.5rem;
+}
+
+.py-3 {
+  padding-block: 1rem;
+}
+
+.py-4 {
+  padding-block: 1.5rem;
+}
+
+.py-5 {
+  padding-block: 3rem;
+}
+
+/* 
+    measure utilities
+*/
+
+.w-full {
+  width: 100%;
+}
+
+.max-width-xs {
+  max-width: 16rem;
+}
+
+.max-width-sm {
+  max-width: 24rem;
+}
+
+.max-width-2xl {
+  max-width: 36rem;
+}
+
+.max-width-3xl {
+  max-width: 48rem;
+}
+
+.max-width-4xl {
+  max-width: 56rem;
+}
+
+
+
+/* 
+    ## Variables
+*/
+
+:root {
+  --color-primary: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+
+  font-family: "Inter", sans-serif, Arial, Helvetica;
+  font-size: 1rem;
+}
+
+
+body {
+    background-color: var(--off-black);
+    color: var(--white);
+    min-height: 100vh;
+    
+    display: grid;
+    place-content: center;
+    padding-inline: 1rem;
+    padding-block-start: 4rem;
+}
+
+.container {
+    max-width: 36rem;
+    background-color: var(--dark-grey);
+    border-radius: .75rem;
+    padding-block: 1.5rem;
+    padding-inline: 1.2rem;
+}
+
+.header h1.name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.header .location {
+    margin-top: .15rem;
+    font-size: .9rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.header .profile-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.container .content {
+    margin-top: 1.5rem;
+}
+
+.content .link-list {
+    margin-top: 1.5rem;
+}
+
+.content .link-list a {
+    display: block;
+    padding-block: .85rem;
+    padding-inline: 1rem;
+    background-color: var(--grey);
+    border-radius: .5rem;
+    margin-top: .5rem;
+    color: var(--white);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.content .link-list a:hover {
+    background-color: var(--color-primary);
+    color: var(--dark-grey);
+}
+
+.attribution {
+    margin-top: 1.5rem;
+    font-size: .8rem;
+    color: #c0b7b7;
+    text-align: center;
+}
