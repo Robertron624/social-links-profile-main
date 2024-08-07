@@ -28,8 +28,8 @@ Users should be able to:
 ![page screenshot](image.png)
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Link](https://github.com/Robertron624/social-links-profile-main)
+- Live Site URL: [Link](https://robertron624.github.io/social-links-profile-main/)
 
 ## My process
 
